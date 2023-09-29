@@ -16,3 +16,5 @@ int main()
     if(st.empty()) cout << "YES";
     else cout << "NO";
 }
+
+//run id: 5305

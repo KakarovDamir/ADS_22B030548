@@ -25,3 +25,5 @@ int main (){
         cout << a[i] << ' ';
     }
 }
+
+//run id:4847

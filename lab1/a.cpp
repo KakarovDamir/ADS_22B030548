@@ -27,3 +27,5 @@ int main(){
         deck(a[i]);
     }
 }
+
+//run id:5209
