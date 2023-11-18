@@ -1,5 +1,5 @@
 #include <iostream>
-#include <unordered_set>
+#include <climits>
 
 using namespace std;
 
@@ -7,7 +7,7 @@ long long p = 31;
 
 long long my_hash(string s) {
     long long h = 0;
-    for (int i = 0; i < s.size(); i++) {
+    for (long long i = 0; i < s.size(); i++) {
         h = (h * p + (s[i] - 'a' + 1));
     }
     return h;
@@ -18,7 +18,7 @@ bool check(string s, string t) {
     int hs = my_hash(s.substr(0, m));
     int ht = my_hash(t);
 
-    int pm = 1;
+    long long pm = 1;
     for (int i = 0; i < m - 1; i++) {
         pm *= p;
     }
@@ -39,7 +39,7 @@ int main() {
     int n; cin >> n;
     string a[n];
 
-    int min_size = INT32_MAX;
+    long long min_size = INT_MAX;
     string min_string;
     for (int i = 0; i < n; i++) {
         string s; cin >> s;
@@ -51,7 +51,7 @@ int main() {
         a[i] = s;
     }
 
-    int max_size = 0;
+    long long max_size = 0;
     string res = "";
 
     for (int i = 0; i < min_size; i++){
